@@ -1,0 +1,166 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Sonar-Stock analysis</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class='bx bx-money-withdraw'></i> Market Sonar </a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#products">About</a>
+            <a href="#categories">Contact</a>
+            <a href="{% url 'home:Login' %}">Login</a>
+            <a href="{% url 'home:Register' %}">Register</a>
+        </nav>
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>We <span> Analyze </span> Market for you</h3>
+            <p>Get Quick briefings and stock predictions</p>
+            <a href="{% url 'home:Login' %}" class="btn">Login</a>
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- features section starts  -->
+
+    <section class="features" id="features">
+
+        <h1 class="heading"> What we do for <span>YOU</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="{{STATIC_URL}}image/feature-img-1.png" alt="">
+                <h3>Stock predictions</h3>
+                <p>We provide you with predictions of stock price using the best in industry algorithms</p>
+            </div>
+
+            <div class="box">
+                <img src="{{STATIC_URL}}image/feature-img-2.png" alt="">
+                <h3>News analysis
+                </h3>
+                <p>We analysis the sentiments of Business News for your quick decisions</p>
+            </div>
+
+            <div class="box">
+                <img src="{{STATIC_URL}}image/feature-img-3.png" alt="">
+                <h3>Get Recommendations</h3>
+                <p>We provide you with recommendations of stocks for you to trade or invest</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- features section ends -->
+
+    <!-- categories section starts  -->
+
+   
+
+    <!-- categories section ends -->
+
+    <!-- review section starts  -->
+    <section class="review" id="review">
+
+        <h1 class="heading"> Are you a <span>Market Expert</span> </h1>
+
+        <div class="swiper review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="{% static 'image/pic-1.png' %}" alt="">
+                    <p>Are you an experienced trader/ invester, be with us to create a better solution for market enthusiasts</p>
+                    <a href="{% url 'home:Login' %}" class="btn">Join with us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="review" id="review">
+
+        <h1 class="heading"> User <span>review</span> </h1>
+
+        <div class="swiper review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="{% static 'image/pic-1.png' %}" alt="">
+                    <p>Market Sonar helps us to select stocks fast and know about market sentiments fast. The predictions also provide the confidence for newbies to trade.</p>
+                    <h3>john deo</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3> Market Sonar <i class='bx bx-money-withdraw'></i> </h3>
+                <p>All rights reserved.connect us with </p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section ends -->
+
+
+</body>
+
+</html>

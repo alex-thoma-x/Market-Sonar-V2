@@ -1,0 +1,101 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- <head>
+
+</head> -->
+<head>
+  function showLoaderOnClick(url) {
+    showLoader();
+    window.location=url;
+}
+function showLoader(){
+    $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
+}
+</head>
+
+<body>
+
+<!-- <header>
+
+</header> -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="{% url 'stock:news' %}">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Stock</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{% url 'stock:news' %}">
+              <i class="bi bi-circle"></i><span>News</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'stock:graph' %}">
+              <i class="bi bi-circle"></i><span>Prediction</span></a>
+              
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'stock:socio' %}">
+              <i class="bi bi-circle"></i><span>Social Sentiment</span></a>
+              
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- End Components Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Feedback and Complains</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{% url 'stock:feedback' %}">
+              <i class="bi bi-circle"></i><span>Send Feedback</span>
+            </a>
+          </li>
+        </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link collapsed"  href="{% url 'blog:blog' %}" target="_blank">
+              <i class="bi bi-menu-button-wide"></i><span>Ideas and Blog</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+           </li>
+          
+      <!-- End Forms Nav -->
+
+      <!-- End Tables Nav -->
+
+      <li class="nav-heading">Pages</li>
+
+      
+
+  </aside><!-- End Sidebar-->
+
+  <!-- main start -->
+
+  {% block content %}
+  {% endblock %}
+  <!-- End #main -->
+
+  <!-- Vendor JS Files -->
+
+  <!-- Template Main JS File -->
+ 
+
+</body>
+</html>

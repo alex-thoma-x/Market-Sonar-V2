@@ -1,0 +1,19 @@
+{% include "analysis/acc_aside.html" %}
+{% include "analysis/acc_header.html" %}
+{% include "analysis/ad_head.html" %}
+{% load static %}
+{% block content %}
+<main id="main" class="main">
+    
+
+      <form action="{% url 'stock:feedback' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Please Enter your Feedback here</label>
+            <textarea class="form-control" id="T1" rows="3" name='T1'></textarea>
+          </div>
+
+        <input type="submit" value="submit" class="btn-create" name="submit">
+    </form>
+</main>
+{% endblock %}

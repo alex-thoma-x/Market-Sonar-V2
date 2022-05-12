@@ -1,0 +1,25 @@
+{% include "analysis/acc_aside.html" %}
+{% include "analysis/acc_header.html" %}
+{% include "analysis/ad_head.html" %}
+{% load static %}
+{% block content %}
+<main id="main" class="main">
+
+  <form action="{% url 'stock:socio' %}" method="POST">
+    {% csrf_token %}
+    <input list="symbol" placeholder="Enter Stock Symbol" name="symbol">
+    <datalist id="symbol">
+        {% if list %}
+        {% for i in list %}
+        <option value={{i}}>{{i}}</option>
+        {% endfor %}
+        {% endif %}
+    </datalist>
+
+    <input type="submit" value="submit" class="btn-create" name="submit">
+</form>
+    <body>
+        <img src="data:image/png;base64,{{ data }}" alt="" height="400" ,width="400">
+      </body>
+</main>
+{% endblock %}
